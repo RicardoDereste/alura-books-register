@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container-button">
+            <label for="menu" class="container-label">
+                <span class="header-menu-hamburger container-image"></span>
+            </label> 
+            <ul class="menu-list">
+                <li class="menu-list-title">Category</li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">PROGRAMMING</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">FRONT-END</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">INFRASTRUCTURE</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">BUSINESS</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">DESIGN & UX</a>
+                </li>
+            </ul>              
+            <img class="container-image" src="./img/Logo.svg" alt="Logo AluraBooks">
+            <h1 class="container-title"><b class="container-title-bold">Alura</b>Books</h1>
+        </div>
+
+        <ul class="options">
+            <input type="checkbox" id="options-menu" class="options-button">
+            <label for="options-menu" class="options-label">
+                <li class="options-item">Category</li>
+            </label>
+
+            <ul class="menu-list">
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">PROGRAMMING</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">FRONT-END</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">INFRASTRUCTURE</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">BUSINESS</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="#" class="menu-list-link">DESIGN & UX</a>
+                </li>
+            </ul>
+
+            <li class="options-item"><b class="options-link">Favorites</b></li>
+            <li class="options-item"><b class="options-link">My shelf</b></li>
+        </ul>
+
+        <div class="container">
+            <a href="#">
+                <img class="container-image container-image-invisible" src="./img/Favorites.svg" alt="My Favorites">
+            </a>
+            <a class="container-link" href="#">
+                <img class="container-image" src="./img/Bag.svg" alt="Cart">
+                <p class="container-text">My Cart</p>
+            </a>
+            <a class="container-link" href="#">
+                <img class="container-image" src="./img/User.svg" alt="My Profile">
+                <p class="container-text">My Profile</p>
+            </a>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h2 class="banner-title">Registration Screen</h2>
+    </section>
+
+    <main class="main">
+        <h2 class="main-title">Registration Details</h2>
+
+        <form class="main-form" id="formulario" target="_blank"
+            onsubmit="location.replace('./register-finished.html')">
+            <h3 class="main-subtitle">Personal Data</h3>
+            <div class="form-field">
+                <label class="field-label" for="nome">Full Name</label>
+                <input name="nome" id="nome" class="field-written" required />
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label class="field-label" for="nascimento">Birth</label>
+                    <input name="nascimento" id="nascimento" type="date" class="field-written" required />
+                </div>
+                <div class="form-field">
+                    <label class="field-label" for="telefone">Contact</label>
+                    <input name="telefone" id="telefone" type="tel" placeholder="xxx xxx xxxx" class="field-written"
+                        required />
+                </div>
+            </div>
+            <div class="form-field">
+                <label class="field-label" for="email">E-mail</label>
+                <input name="email" id="email" type="email" class="field-written" required />
+            </div>
+
+            <h3 class="main-subtitle">Address</h3>
+
+            <div class="form-field">
+                <label class="field-label" for="cep">CEP</label>
+                <input name="cep" id="cep" class="field-written" required />
+                <div id="erro"></div>
+            </div>
+
+            <div class="form-field">
+                <label class="field-label" for="endereco">Address</label>
+                <input name="endereco" id="endereco" class="field-written" required />
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label class="field-label" for="numero">Number</label>
+                    <input name="numero" id="numero" class="field-written" required />
+                </div>
+                <div class="form-field">
+                    <label class="field-label" for="complemento">Complement</label>
+                    <input name="complemento" id="complemento" class="field-written" />
+                </div>
+            </div>
+            <div class="form-field">
+                <label class="field-label" for="bairro">Neighborhood</label>
+                <input name="bairro" id="bairro" class="field-written" required />
+            </div>
+            <div class="form-group">
+                <div class="form-field">
+                    <label class="field-label" for="cidade">City</label>
+                    <input name="cidade" id="cidade" class="field-written" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="field-label" for="estado">UF</label>
+                    <select id="estado" name="estado" class="field-written">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <input type="submit" value="Submit" class="form-button" id="enviar">
+        </form>
+    </main>
+
+    <hr>
+    
+    <footer class="footer">
+        <h2 class="footer-title">Group Alura</h2>
+        <ul class="footer-list">
+            <li class="footer-list-title">Education</li>
+            <li class="footer-list-item">
+                <img src="./img/CasaDoCodigo.svg" alt="House of code Logo">
+                <a href="#" class="footer-list-link">House of Code</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/Caelum.svg" alt="Caelum Logo">
+                <a href="#" class="footer-list-link">Caelum</a>
+            </li>
+        </ul>
+        <ul class="footer-list">
+            <li class="footer-list-title">Online Education</li>
+            <li class="footer-list-item">
+                <img src="./img/Alura.svg" alt="Alura Logo">
+                <a href="#" class="footer-list-link">Alura</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/AluraEmpresas.svg" alt="Alura for Business Logo">
+                <a href="#" class="footer-list-link">Alura for Business</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/AluraLATAM.svg" alt="Alura LATAM Logo">
+                <a href="#" class="footer-list-link">Alura LATAM</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/AluraStart.svg" alt="Alura Start Logo">
+                <a href="#" class="footer-list-link">Alura Start</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/MusicDot.svg" alt="MusicDot Logo">
+                <a href="#" class="footer-list-link">MusicDot</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/AluraLingua.svg" alt="Alura Lingua Logo">
+                <a href="#" class="footer-list-link">Alura Lingua</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/PM3.svg" alt="PM3 Logo">
+                <a href="#" class="footer-list-link">PM3</a>
+            </li>
+        </ul>
+        <ul class="footer-list">
+            <li class="footer-list-title">Community</li>
+            <li class="footer-list-item">
+                <img src="./img/HipstersTech.svg" alt="HipstersTech Logo">
+                <a href="#" class="footer-list-link">Hipsters Tech</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/ScubaDev.svg" alt="Scuba Dev Logo">
+                <a href="#" class="footer-list-link">Scuba Dev</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/LayersTech.svg" alt="Layers Tech Logo">
+                <a href="#" class="footer-list-link">Layers Tech</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/LikeABoss.svg" alt="Like a Boss Logo">
+                <a href="#" class="footer-list-link">Like a Boss</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/CarreiraSemFronteira.svg" alt="Borderless Career Logo">
+                <a href="#" class="footer-list-link">Borderless Career</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/HipstersJobs.svg" alt="Hipsters Jobs Logo">
+                <a href="#" class="footer-list-link">Hipsters Jobs</a>
+            </li>
+            <li class="footer-list-item">
+                <img src="./img/GUJ.svg" alt="GUJ Logo">
+                <a href="#" class="footer-list-link">GUJ</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
